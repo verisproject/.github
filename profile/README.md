@@ -14,4 +14,4 @@ VERIS, dünya genelindeki bu ortak sorunlara yenilikçi ve uygulanabilir bir ç�
 
 ---
 
-veris.vote | ahmethankalenderoglu.com/duyurular | contact@veris.vote
+https://veris.vote | contact@veris.vote
