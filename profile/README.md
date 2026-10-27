@@ -15,7 +15,7 @@ VERIS is a blockchain protocol being developed to offer an innovative and viable
 | **3 · Identity and vote never meet** | Who voted and how they voted are never brought together in any record or by any institution. |
 | **4 · Anyone can audit the count** | Any observer can mathematically verify that the national result was computed correctly, without seeing a single vote. |
 | **5 · No forged or double votes** | Unauthorised or repeated votes are rejected. Even if the nodes operating the system collude, independent auditing detects it. |
-| **6 · Designed for national scale** | With parallel sub-chains, a single computer processed over 2,500 votes per second; a 1:1-scale national election simulation is in preparation. |
+| **6 · Designed for national scale** | A single computer processed over 2,500 votes per second; a 1:1-scale national election simulation is in preparation. |
 
 > **No other published system provides all three of these properties at the same time:**
 > voters verify their vote · resists coercion · national scale.
