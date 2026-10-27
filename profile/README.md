@@ -20,15 +20,15 @@ VERIS is a blockchain protocol being developed to offer an innovative and viable
 > **No other published system provides all three of these properties at the same time:**
 > voters verify their vote · resists coercion · national scale.
 
-| System | Voter verifies their vote | Coercion-resistant without revoting | National scale | Public audit |
+| System | Voter verifies their vote | Coercion-resistant | National scale | Public audit |
 |---|:-:|:-:|:-:|:-:|
 | **VERIS** | ✅ | ✅ | ✅ | ✅ |
-| Estonia i-Voting | 🟡 verification limited to 30 minutes after voting, on a separate device | ❌ relies only on revoting against coercion | ✅ | 🟡 tally data is not public, only authorised auditors receive it |
-| Swiss Post | ✅ | ❌ regulation accepts the same coercion risk as postal voting | 🟡 the law caps electronic voting at a share of the electorate | 🟡 audit data is not public, only authorised auditors receive it |
+| Estonia i-Voting | 🟡 verification limited to 15 minutes after voting, on a separate device | ❌ relies only on revoting against coercion | ✅ | 🟡 tally data is not public, only authorised auditors receive it |
+| Swiss Post | ✅ | ❌ has no mechanism to protect votes cast at home from coercion | 🟡 the law caps electronic voting at 30% of a canton's and 10% of the national electorate | 🟡 audit data is not public, only authorised auditors receive it |
 | Helios | ✅ | ❌ voters can produce a receipt that proves their vote | ❌ depends on one central server; its designers do not recommend it for public elections | ✅ |
-| Belenios | ✅ | ❌ voters can produce a receipt that proves their vote | ❌ votes are collected on a single voting server | ✅ |
+| Belenios | ✅ | ❌ voters can produce a receipt that proves their vote | 🟡 credentials are distributed to voters by email; not used in national elections | ✅ |
 | Civitas (JCJ) | ✅ | ✅ | ❌ every vote is compared with every other; cost grows quadratically with voters | ✅ |
-| Hyperion | ✅ | 🟡 fake codes require the voter to be unobserved after results are published | ❌ heavy mixing and decryption: 100k voters ≈ 3.2 hours | ✅ |
+| Hyperion | ✅ | 🟡 needs a private notification channel to each voter; protects only against a limited coercer | ❌ heavy mixing and decryption: 100k voters ≈ 3.2 hours | ✅ |
 
 ✅ provides · 🟡 partially · ❌ does not
 
@@ -68,15 +68,15 @@ VERIS, dünya genelindeki bu ortak sorunlara yenilikçi ve uygulanabilir bir ç�
 > **Yayımlanmış sistemler arasında bu üç özelliği aynı anda sağlayan başka bir sistem bulunmamaktadır:**
 > seçmen oyunu doğrular · baskıya dayanır · ulusal ölçekte çalışır.
 
-| Sistem | Seçmen oyunu doğrular | Tekrar oy olmadan baskıya dayanıklı | Ulusal ölçek | Herkese açık denetim |
+| Sistem | Seçmen oyunu doğrular | Baskıya dayanıklı | Ulusal ölçek | Herkese açık denetim |
 |---|:-:|:-:|:-:|:-:|
 | **VERIS** | ✅ | ✅ | ✅ | ✅ |
-| Estonya i-Voting | 🟡 doğrulama, oy verdikten sonraki 30 dakikayla ve ayrı bir cihazla sınırlı | ❌ baskıya karşı yalnızca tekrar oya güvenir | ✅ | 🟡 sayım verileri kamuya açık değil, yalnızca yetkili denetçilere verilir |
-| İsviçre Post | ✅ | ❌ mevzuat, posta oyuyla aynı baskı riskini kabul ediyor | 🟡 yasa, elektronik oyu seçmenlerin bir kısmıyla sınırlıyor | 🟡 denetim verileri kamuya açık değil, yalnızca yetkili denetçilere verilir |
+| Estonya i-Voting | 🟡 doğrulama, oy verdikten sonraki 15 dakikayla ve ayrı bir cihazla sınırlı | ❌ baskıya karşı yalnızca tekrar oya güvenir | ✅ | 🟡 sayım verileri kamuya açık değil, yalnızca yetkili denetçilere verilir |
+| İsviçre Post | ✅ | ❌ evden verilen oyu baskıdan koruyacak bir mekanizma içermiyor | 🟡 yasa, elektronik oyu kanton seçmenlerinin %30'u ve ülke genelinin %10'u ile sınırlıyor | 🟡 denetim verileri kamuya açık değil, yalnızca yetkili denetçilere verilir |
 | Helios | ✅ | ❌ seçmen, oyunu kanıtlayan bir makbuz üretebiliyor | ❌ tek merkezi sunucuya dayanıyor; tasarımcıları kamu seçimleri için önermiyor | ✅ |
-| Belenios | ✅ | ❌ seçmen, oyunu kanıtlayan bir makbuz üretebiliyor | ❌ oylar tek bir oylama sunucusunda toplanıyor | ✅ |
+| Belenios | ✅ | ❌ seçmen, oyunu kanıtlayan bir makbuz üretebiliyor | 🟡 kimlik bilgileri seçmenlere e-postayla dağıtılıyor; ulusal seçimde kullanılmadı | ✅ |
 | Civitas (JCJ) | ✅ | ✅ | ❌ her oy diğer tüm oylarla karşılaştırılıyor; maliyet seçmen sayısının karesiyle artıyor | ✅ |
-| Hyperion | ✅ | 🟡 sahte kod, seçmenin sonuçlardan sonra gözetimsiz kalmasını gerektiriyor | ❌ ağır karıştırma ve şifre çözme işlemleri: 100 bin seçmen ≈ 3,2 saat | ✅ |
+| Hyperion | ✅ | 🟡 seçmene gizli bir bildirim kanalı gerektiriyor; yalnızca sınırlı baskıya karşı koruyor | ❌ ağır karıştırma ve şifre çözme işlemleri: 100 bin seçmen ≈ 3,2 saat | ✅ |
 
 ✅ sağlar · 🟡 kısmen · ❌ sağlamaz
 
