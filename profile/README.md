@@ -24,6 +24,7 @@ VERIS is a blockchain protocol being developed to offer an innovative and viable
 |---|:-:|:-:|:-:|:-:|
 | **VERIS** | ✅ | ✅ | ✅ | ✅ |
 | Estonia i-Voting | 🟡 verification limited to 15 minutes after voting, on a separate device | ❌ relies only on revoting against coercion | ✅ | 🟡 tally data is not public, only authorised auditors receive it |
+| VoteAgain 🔴 *broken* | ✅ | ❌ relies on revoting against coercion | 🟡 designed to scale; not used in a real election | ✅ |
 | Swiss Post | ✅ | ❌ has no mechanism to protect votes cast at home from coercion | 🟡 the law caps electronic voting at 30% of a canton's and 10% of the national electorate | 🟡 audit data is not public, only authorised auditors receive it |
 | Helios | ✅ | ❌ voters can produce a receipt that proves their vote | ❌ depends on one central server; its designers do not recommend it for public elections | ✅ |
 | Belenios | ✅ | ❌ voters can produce a receipt that proves their vote | 🟡 credentials are distributed to voters by email; not used in national elections | ✅ |
@@ -41,6 +42,64 @@ Some systems rely on revoting against coercion: a vote cast under pressure is ov
 - If traces such as the number or timing of votes are visible in the records, the coercer can tell whether the vote was changed.
 
 For this reason, approaches that rely on revoting are not counted as coercion-resistant in the table.
+
+<details><summary>How was VoteAgain broken?</summary>
+
+VoteAgain (USENIX Security 2020) is a revoting-based system presented as scalable. Haines and Müller showed that its security claims do not hold under its own trust assumptions: one voting authority must be trusted for every security property, and all authorities must be trusted for coercion resistance. According to the authors, the problem lies in the foundations of the design.
+
+[Haines & Müller, “How not to VoteAgain”, IACR ePrint 2020/1406](https://eprint.iacr.org/2020/1406)
+
+</details>
+
+</details>
+
+## Frequently Asked Questions
+
+<details><summary>Is there a technical specification or paper?</summary>
+
+The technical specification of the protocol will be published after 4 January 2027. Until then, researchers who wish to review the code can write to contact@veris.vote.
+
+</details>
+
+<details><summary>Has there been an independent security audit?</summary>
+
+Not yet. Once the technical specification is published, the protocol will be opened to academic and independent review.
+
+</details>
+
+<details><summary>Where do voters cast their votes?</summary>
+
+There is no voting from home or from personal devices. Voters vote at the polling station as they do today; the only difference is that a voting module replaces the paper ballot. The moment of voting stays under existing polling-station safeguards.
+
+</details>
+
+<details><summary>What if a voter's phone or computer is infected with malware?</summary>
+
+Votes are not cast from personal devices, so the voter's own device is not part of the voting process.
+
+</details>
+
+<details><summary>Who operates the nodes?</summary>
+
+Before the election, the election authority sets the number of nodes and publishes requirements for network quality and computing power. Nodes that meet the requirements are whitelisted. Nodes can be operated by companies, foundations, universities or individuals. The authority must accept every node that meets the requirements; it cannot pick and choose.
+
+</details>
+
+<details><summary>What if the nodes collude?</summary>
+
+Every vote's proof of eligibility and the mathematical proof of the count are public. A forged vote or an altered count introduced by colluding nodes is detectable by any observer.
+
+</details>
+
+<details><summary>Can an ordinary voter understand the verification?</summary>
+
+Yes. Voters do not need to know any cryptography; verification shows them the party they chose.
+
+</details>
+
+<details><summary>When will the 1:1-scale simulation run, and will the results be public?</summary>
+
+The simulation is planned to be completed before 4 January 2027. The results and conditions will be published openly.
 
 </details>
 
