@@ -40,6 +40,7 @@ Some systems rely on revoting against coercion: a vote cast under pressure is ov
 - The coercer can keep the voter under watch until voting closes, or take their credentials; the voter cannot vote again.
 - Voting again in secret carries the fear of being caught. The coercion keeps working through that fear.
 - If traces such as the number or timing of votes are visible in the records, the coercer can tell whether the vote was changed.
+- On a fully transparent ledger such as a blockchain, the old vote can only be excluded from the count if its cancellation is visible in the record. That trace can show the coercer that the vote was changed.
 
 For this reason, approaches that rely on revoting are not counted as coercion-resistant in the table.
 
