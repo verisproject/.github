@@ -20,18 +20,32 @@ VERIS is a blockchain protocol being developed to offer an innovative and viable
 > **No other published system provides all three of these properties at the same time:**
 > voters verify their vote · resists coercion · national scale.
 
-| System | Voter verifies their vote | Coercion-resistant | National scale | Public audit |
-|---|:-:|:-:|:-:|:-:|
-| **VERIS** | ✅ | ✅ | ✅ | ✅ |
-| Estonia i-Voting | 🟡 verification limited to 15 minutes after voting, on a separate device | ❌ relies only on revoting against coercion | ✅ | 🟡 tally data is not public, only authorised auditors receive it |
-| VoteAgain 🔴 *broken* | ✅ | ❌ relies on revoting against coercion | 🟡 designed to scale; not used in a real election | ✅ |
-| Swiss Post | ✅ | ❌ has no mechanism to protect votes cast at home from coercion | 🟡 the law caps electronic voting at 30% of a canton's and 10% of the national electorate | 🟡 audit data is not public, only authorised auditors receive it |
-| Helios | ✅ | ❌ voters can produce a receipt that proves their vote | ❌ depends on one central server; its designers do not recommend it for public elections | ✅ |
-| Belenios | ✅ | ❌ voters can produce a receipt that proves their vote | 🟡 credentials are distributed to voters by email; not used in national elections | ✅ |
-| Civitas (JCJ) | ✅ | ✅ | ❌ every vote is compared with every other; cost grows quadratically with voters | ✅ |
-| Hyperion | ✅ | 🟡 needs a private notification channel to each voter; protects only against a limited coercer | ❌ heavy mixing and decryption: 100k voters ≈ 3.2 hours | ✅ |
+| System | Voter verifies their vote | Coercion-resistant | Manipulation security | National scale | Public audit |
+|---|:-:|:-:|:-:|:-:|:-:|
+| **VERIS** | ✅ | ✅ | ✅ | ✅ | ✅ |
+| ElectionGuard | 🟡 the device's honesty is checked by random audits; voters never see their own vote | ✅ | ❌ against ballot stuffing, relies only on procedures and poll workers | 🟡 designed to scale; used only in pilots of a few hundred voters | ✅ |
+| Prêt à Voter (vVote) | 🟡 the device's honesty is checked by random audits; voters never see their own vote | ✅ | ❌ against ballot stuffing, relies only on procedures and poll workers | ❌ largest use: 1,121 votes in the 2014 Victorian election | ✅ |
+| Scantegrity II | 🟡 the device's honesty is checked by random audits; voters never see their own vote | ✅ | ❌ against ballot stuffing, relies only on procedures and poll workers | ❌ used only in municipal elections | ✅ |
+| STAR-Vote | 🟡 the device's honesty is checked by random audits; voters never see their own vote | ✅ | ❌ against ballot stuffing, relies only on procedures and poll workers | ❌ designed but never used in a real election | ✅ |
+| Estonia i-Voting | 🟡 verification limited to 15 minutes after voting, on a separate device | ❌ relies only on revoting against coercion | 🟡 only authorised auditors can verify ballot eligibility | ✅ | 🟡 tally data is not public, only authorised auditors receive it |
+| VoteAgain 🔴 *broken* | ✅ | ❌ relies on revoting against coercion | ❌ requires trust in the voting authorities | 🟡 designed to scale; not used in a real election | ✅ |
+| Swiss Post | ✅ | ❌ has no mechanism to protect votes cast at home from coercion | 🟡 only authorised auditors can verify ballot eligibility | 🟡 the law caps electronic voting at 30% of a canton's and 10% of the national electorate | 🟡 audit data is not public, only authorised auditors receive it |
+| Helios | ✅ | ❌ voters can produce a receipt that proves their vote | ❌ the server can add forged ballots undetected | ❌ depends on one central server; its designers do not recommend it for public elections | ✅ |
+| Belenios | ✅ | ❌ voters can produce a receipt that proves their vote | ✅ | 🟡 credentials are distributed to voters by email; not used in national elections | ✅ |
+| Civitas (JCJ) | ✅ | ✅ | ✅ | ❌ every vote is compared with every other; cost grows quadratically with voters | ✅ |
+| Hyperion | ✅ | 🟡 needs a private notification channel to each voter; protects only against a limited coercer | ✅ | ❌ heavy mixing and decryption: 100k voters ≈ 3.2 hours | ✅ |
 
 ✅ provides · 🟡 partially · ❌ does not
+
+<details><summary>Why is ElectionGuard the closest competitor?</summary>
+
+ElectionGuard, developed by Microsoft, is an end-to-end verifiable voting system used at the polling station, like VERIS. It is coercion-resistant and has been used in pilot elections in the United States. It differs from VERIS in three key ways:
+
+- **Verification relies on sampling.** A voter can test that the device encrypts correctly only by spoiling that ballot; they never see the vote they actually cast. A device that alters only the ballots it expects not to be tested may go unnoticed.
+- **Ballot stuffing depends on procedure.** Whether a ballot was cast by an eligible voter cannot be verified from outside; in this respect it relies on the same safeguards as today's paper system.
+- **It is not a blockchain.** The election record is not kept on a distributed ledger; it is published by the election authority after the election.
+
+</details>
 
 <details><summary>Why is revoting not a solution?</summary>
 
