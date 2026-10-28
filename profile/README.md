@@ -6,6 +6,10 @@ Elections are a cornerstone of democratic societies worldwide and confidence in 
 
 VERIS is a blockchain protocol being developed to offer an innovative and viable solution to these common global problems. Through the distributed and immutable nature of blockchain technology, the VERIS Project aims to ensure that election rules cannot be altered by any authority once the electoral process has begun; that votes can be independently audited and counted by anyone; that every voter can verify that their vote has been correctly recorded and counted; and that election costs arising from high labor requirements can be reduced, enabling elections to be conducted in a more sustainable manner. The project also aims to demonstrate the protocol's scalability through a 1:1-scale election simulation.
 
+## Design Approach
+
+Much of the work on electronic voting aims either to let voters vote from home or to add a verification layer to the existing polling process. These approaches offer strong solutions for their own goals. VERIS starts from a different question: at which stages can an election be manipulated? Because the system was designed around this question from the start, voter verification, coercion resistance and protection against ballot stuffing are not separate add-on layers but natural consequences of the architecture.
+
 ## Problems Solved
 
 | | |
