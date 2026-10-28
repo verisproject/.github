@@ -43,13 +43,14 @@ Some systems rely on revoting against coercion: a vote cast under pressure is ov
 
 For this reason, approaches that rely on revoting are not counted as coercion-resistant in the table.
 
+
+</details>
+
 <details><summary>How was VoteAgain broken?</summary>
 
 VoteAgain (USENIX Security 2020) is a revoting-based system presented as scalable. Haines and Müller showed that its security claims do not hold under its own trust assumptions: one voting authority must be trusted for every security property, and all authorities must be trusted for coercion resistance. According to the authors, the problem lies in the foundations of the design.
 
 [Haines & Müller, “How not to VoteAgain”, IACR ePrint 2020/1406](https://eprint.iacr.org/2020/1406)
-
-</details>
 
 </details>
 
