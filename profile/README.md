@@ -17,7 +17,7 @@ Much of the work on electronic voting aims either to let voters vote from home o
 | **1 · Voters can be sure of their vote** | Every voter can personally verify that their vote was recorded for the party they chose and included in the count. |
 | **2 · Safe under coercion** | Even if a voter is forced to reveal their verification information, their real vote is not exposed. |
 | **3 · Identity and vote never meet** | Who voted and how they voted are never brought together in any record or by any institution. |
-| **4 · Anyone can audit the count** | Any observer can mathematically verify that the national result was computed correctly, without seeing a single vote. |
+| **4 · Anyone can audit the count** | Any observer can recount the national result from the votes on the public chain; a forged count or even a single altered vote is detected. |
 | **5 · No forged or double votes** | Unauthorised or repeated votes are rejected. Even if the nodes operating the system collude, independent auditing detects it. |
 | **6 · Designed for national scale** | The system scales to handle a national election load; a 1:1-scale national election simulation is in preparation. |
 
@@ -107,7 +107,7 @@ Before the election, the election authority sets the number of nodes and publish
 
 <details><summary>What if the nodes collude?</summary>
 
-Every vote's proof of eligibility and the mathematical proof of the count are public. A forged vote or an altered count introduced by colluding nodes is detectable by any observer.
+Every vote's proof of eligibility is public, and anyone can recount the result from the public chain. A forged vote or an altered count introduced by colluding nodes is detectable by any observer.
 
 </details>
 
